@@ -1,5 +1,5 @@
 // Código que roda DENTRO da página (page.addInitScript/evaluate). Expõe window.__sqv com as medições.
-// Sem dependências. Tudo aqui é heurística medida no que o navegador desenhou, não no HTML escrito.
+// Sem dependências. Tudo aqui é heurística medida no que o navegador desenhou, nêo no HTML escrito.
 (() => {
   if (window.__sqv) return;
   const VW = () => window.innerWidth, VH = () => window.innerHeight;
@@ -66,8 +66,8 @@
   }
   const rotulo = el => texto(el) || el.getAttribute('title') || (el.querySelector && el.querySelector('img[alt]') ? el.querySelector('img[alt]').alt : '') || '';
 
-  // ---------- botão principal (CTA) ----------
-  function pertoDoTitulo(r) { // o botão da promessa fica logo abaixo (ou ao lado) do título
+  // ---------- botêo principal (CTA) ----------
+  function pertoDoTitulo(r) { // o botêo da promessa fica logo abaixo (ou ao lado) do título
     const h = document.querySelector('h1'); if (!h) return false; const hr = h.getBoundingClientRect();
     return r.top >= hr.top - 10 && r.top - hr.bottom < 320;
   }
@@ -75,7 +75,7 @@
     const out = [];
     for (const el of document.querySelectorAll('a,button,input[type=submit],input[type=button],[role=button]')) {
       if (!visivel(el)) continue;
-      // a marca (data-cta / --cta) é lida ANTES dos filtros: botão de contorno ou link de texto marcado vale assim mesmo
+      // a marca (data-cta / --cta) é lida ANTES dos filtros: botêo de contorno ou link de texto marcado vale assim mesmo
       const marcado = el.hasAttribute('data-cta') || !!(window.__sqvCta && el.matches(window.__sqvCta));
       const cs = getComputedStyle(el), r = el.getBoundingClientRect(); let f = fundoProprio(cs);
       if (!f && marcado) f = cor(cs.borderTopColor) && cor(cs.borderTopColor).a >= .5 && parseFloat(cs.borderTopWidth) > 0 ? cor(cs.borderTopColor) : cor(cs.color);
@@ -84,7 +84,7 @@
       const rot = { top: r.top + scrollY, left: r.left, w: r.width, h: r.height };
       const flutua = getComputedStyle(el).position === 'fixed' || !!el.closest('[style*="position: fixed"],[style*="position:fixed"]');
       const txt = rotulo(el);
-      // botão flutuante sem texto (ícone de WhatsApp, chat) pesa pouco: quase nunca é a ação principal da página
+      // botêo flutuante sem texto (ícone de WhatsApp, chat) pesa pouco: quase nunca é a açêo principal da página
       out.push({ el, cor: f, atras, d, r: rot, texto: txt, sel: seletor(el), marcado,
         peso: Math.min(r.width, 360) * r.height * (d / 255) * (saturada(f) ? 1.6 : 1) * (!txt ? .15 : 1) * (flutua ? .5 : 1)
           * (pertoDoTitulo(r) ? 2 : 1) * (el.closest('form') && (el.type === 'submit' || el.tagName === 'INPUT') ? .5 : 1) });
@@ -98,9 +98,9 @@
     const tela1 = bs.filter(b => b.r.top + b.r.h <= VH() + 2);
     const lista = marc.length ? marc : tela1.length ? tela1 : bs;
     const b = lista.reduce((a, x) => x.peso > a.peso ? x : a);
-    // outros botões cheios na 1ª tela, com outro texto: disputam a atenção (cor diferente pesa mais; mesma cor também conta se for grande)
+    // outros botões cheios na 1ª tela, com outro texto: disputam a atençêo (cor diferente pesa mais; mesma cor também conta se for grande)
     const outros = tela1.filter(x => x !== b && x.texto && x.texto !== b.texto && x.peso > b.peso * .3 && !x.el.closest('nav,header nav'));
-    return Object.assign({}, b, { naTela1: b.r.top + b.r.h <= VH() + 2, escolhidoPor: marc.length ? (window.__sqvCta ? '--cta' : 'data-cta') : 'botão cheio de maior peso na 1ª tela (tamanho, cor e proximidade do título)',
+    return Object.assign({}, b, { naTela1: b.r.top + b.r.h <= VH() + 2, escolhidoPor: marc.length ? (window.__sqvCta ? '--cta' : 'data-cta') : 'botêo cheio de maior peso na 1ª tela (tamanho, cor e proximidade do título)',
       concorrentes: outros.filter(x => dist(x.cor, b.cor) > 40).map(x => x.texto), outrosTela1: outros.map(x => x.texto) });
   }
   function titulo() {
@@ -162,7 +162,7 @@
     }
     if (pintar) for (const u of usos) { u.el.style.outline = '3px dashed #ff00c8'; u.el.style.outlineOffset = '2px'; }
     const porTipo = {}; for (const u of usos) porTipo[u.tipo] = (porTipo[u.tipo] || 0) + 1;
-    // o botão "se separa" do fundo por claro/escuro (3:1) ou por ser a única cor viva num fundo neutro ou de matiz oposto
+    // o botêo "se separa" do fundo por claro/escuro (3:1) ou por ser a única cor viva num fundo neutro ou de matiz oposto
     const ct = contraste(alvo, c.atras), dh = Math.abs(hsl(alvo).h - hsl(c.atras).h), matiz = Math.min(dh, 360 - dh);
     const separa = ct >= 3 || (saturada(alvo) && ct >= 1.2 && (!saturada(c.atras) || matiz >= 60));
     return { destaque: hex(alvo), destaqueColorido: saturada(alvo), contrasteBotao: +ct.toFixed(2), separa,
@@ -196,7 +196,7 @@
       if (r.width < 80 || r.height < 60 || r.height > VH() * 1.6) continue;
       if (limites.some(l => t < l - 20 && b > l + 20) && !cruzam.some(x => x.contains(el) || el.contains(x))) cruzam.push(el);
     }
-    // peça que É filha direta do contêiner e invade a vizinha (cartão com margem negativa entre duas seções)
+    // peça que É filha direta do contêiner e invade a vizinha (cartêo com margem negativa entre duas seções)
     const rs = lista.map(e => { const r = e.getBoundingClientRect(); return { e, t: r.top + scrollY, b: r.bottom + scrollY }; });
     for (let i = 0; i < rs.length; i++) for (let k = 0; k < rs.length; k++) {
       if (i === k) continue; const inv = Math.min(rs[i].b, rs[k].b) - Math.max(rs[i].t, rs[k].t);
@@ -221,7 +221,7 @@
     for (const el of els) {
       if (!visivel(el)) continue; const r = el.getBoundingClientRect(); if (!naTela(r) || r.width * r.height < 80) continue;
       const cs = getComputedStyle(el);
-      // só o que é animação (opacidade, transform, recorte, filtro). Mudança de posição por imagem carregando não conta.
+      // só o que é animaçêo (opacidade, transform, recorte, filtro). Mudança de posiçêo por imagem carregando nêo conta.
       m.set(el, (+cs.opacity).toFixed(2) + '|' + cs.transform + '|' + cs.clipPath + '|' + cs.backgroundPosition + '|' + cs.strokeDashoffset + '|' + cs.filter);
     }
     for (const v of document.querySelectorAll('video')) if (visivel(v) && naTela(v.getBoundingClientRect())) m.set(v, 't' + v.currentTime);

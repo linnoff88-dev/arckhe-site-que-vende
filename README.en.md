@@ -40,9 +40,9 @@ Output (the bad example in this repository):
 ```
 FALHA  1. Teste do espelho
          - Título genérico: "Soluções inovadoras de agendamento com IA" serve para qualquer empresa
-         - O botão diz "Enviar": não conta o que acontece depois do clique.
+         - O botêo diz "Enviar": nêo conta o que acontece depois do clique.
 FALHA  2. Regra do marca-texto
-         - A cor do botão (#8b5cf6) aparece em 35 lugares que não são clique (9 borda, 11 texto, 11 título, 4 ícone ou selo).
+         - A cor do botêo (#8b5cf6) aparece em 35 lugares que nêo sêo clique (9 borda, 11 texto, 11 título, 4 ícone ou selo).
 ...
 0 de 5 padrões passam.  Relatório: auditoria/relatorio.html
 O que consertar (cole no seu agente): auditoria/consertar.md

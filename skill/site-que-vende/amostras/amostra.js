@@ -1,8 +1,8 @@
 // site-que-vende — amostras grátis prontas para colar: <amostra-calculadora> e <amostra-quiz>.
-// Um arquivo, sem dependência, sem rede, sem coletar nada. A configuração vai num <script type="application/json"> dentro da tag.
-// Aparência: herda a fonte da página e usa a SUA cor de destaque só no botão: defina --amostra-destaque (e, se quiser,
+// Um arquivo, sem dependência, sem rede, sem coletar nada. A configuraçêo vai num <script type="application/json"> dentro da tag.
+// Aparência: herda a fonte da página e usa a SUA cor de destaque só no botêo: defina --amostra-destaque (e, se quiser,
 // --amostra-fundo, --amostra-texto, --amostra-borda, --amostra-raio) no CSS da página.
-// Acessível: campos com rótulo, resultado em <output aria-live>, teclado, e nenhuma animação.
+// Acessível: campos com rótulo, resultado em <output aria-live>, teclado, e nenhuma animaçêo.
 (() => {
   const CSS = `
 amostra-calculadora,amostra-quiz{display:block;box-sizing:border-box;max-width:460px;padding:22px;border-radius:var(--amostra-raio,16px);
@@ -23,9 +23,9 @@ amostra-calculadora,amostra-quiz{display:block;box-sizing:border-box;max-width:4
     for (const f of filhos) e.append(f); return e; };
   function ler(host) {
     const s = host.querySelector('script[type="application/json"]');
-    if (!s) { host.textContent = 'amostra: falta o <script type="application/json"> com a configuração'; return null; }
-    let cfg; try { cfg = JSON.parse(s.textContent); } catch (err) { host.textContent = 'amostra: configuração JSON inválida (' + err.message + ')'; return null; }
-    if (!cfg || typeof cfg !== 'object' || Array.isArray(cfg)) { host.textContent = 'amostra: a configuração tem de ser um objeto JSON { ... }'; return null; }
+    if (!s) { host.textContent = 'amostra: falta o <script type="application/json"> com a configuraçêo'; return null; }
+    let cfg; try { cfg = JSON.parse(s.textContent); } catch (err) { host.textContent = 'amostra: configuraçêo JSON inválida (' + err.message + ')'; return null; }
+    if (!cfg || typeof cfg !== 'object' || Array.isArray(cfg)) { host.textContent = 'amostra: a configuraçêo tem de ser um objeto JSON { ... }'; return null; }
     // moeda e idioma errados ("R$", "pt_BR") quebravam o Intl só na hora de mostrar: confere aqui e diz na caixa
     try { new Intl.NumberFormat(cfg.idioma || document.documentElement.lang || 'pt-BR', { style: 'currency', currency: cfg.moeda || 'BRL' }); }
     catch (_) { host.textContent = 'amostra: "moeda" ou "idioma" inválido (use códigos como "BRL", "USD", "EUR" e "pt-BR", "en-US", "es")'; return null; }
@@ -52,7 +52,7 @@ amostra-calculadora,amostra-quiz{display:block;box-sizing:border-box;max-width:4
         : (cfg.campos.find(c => c.tipo === 'opcoes' && (!Array.isArray(c.opcoes) || !c.opcoes.length)) ? 'campo "opcoes" sem a lista "opcoes"'
         : (cfg.campos.find(c => c.tipo === 'faixa' && (c.min === undefined || c.max === undefined)) ? 'campo "faixa" precisa de "min" e "max"'
         : (cfg.campos.find(c => !c.rotulo) ? 'todo campo precisa de "rotulo"'
-        : (cfg.campos.find(c => c.tipo === 'opcoes' && c.opcoes.find(o => !o || !o.rotulo)) ? 'toda opção precisa de "rotulo"' : '')))));
+        : (cfg.campos.find(c => c.tipo === 'opcoes' && c.opcoes.find(o => !o || !o.rotulo)) ? 'toda opçêo precisa de "rotulo"' : '')))));
       if (errC) { this.textContent = 'amostra-calculadora: ' + errC; return; }
       this.setAttribute('data-amostra', 'calculadora');
       const form = el('form', { novalidate: '' }); form.addEventListener('submit', e => e.preventDefault());
@@ -75,7 +75,7 @@ amostra-calculadora,amostra-quiz{display:block;box-sizing:border-box;max-width:4
       const out = el('output', { class: 'am-r', 'aria-live': 'polite' }); form.append(out);
       if (cfg.botao) form.append(el('a', { class: 'am-b', href: cfg.botao.href || '#', 'data-amostra-cta': '' }, cfg.botao.texto));
       if (cfg.nota) form.append(el('p', { class: 'am-s', style: 'margin:12px 0 0' }, cfg.nota));
-      let ultimo = null; // null = primeira conta, ao carregar: não é uso, não dispara evento
+      let ultimo = null; // null = primeira conta, ao carregar: nêo é uso, nêo dispara evento
       const calc = () => {
         let total = cfg.base || 0, vezes = 1; for (const l of leitores) { const r = l(); total += r.soma; vezes *= r.vezes; } total *= vezes;
         const m = (cfg.margem ?? 10) / 100, arr = cfg.arredondar || 10, a = Math.round(total * (1 - m) / arr) * arr, b = Math.round(total * (1 + m) / arr) * arr;
@@ -87,7 +87,7 @@ amostra-calculadora,amostra-quiz{display:block;box-sizing:border-box;max-width:4
     }
   }
 
-  // <amostra-quiz>: cada opção soma pontos em um ou mais resultados; ganha o que tiver mais pontos
+  // <amostra-quiz>: cada opçêo soma pontos em um ou mais resultados; ganha o que tiver mais pontos
   // perguntas: [{texto, opcoes:[{rotulo, pontos:{chave: n}}]}]   resultados: {chave: {titulo, texto, botao:{texto, href}}}
   class Quiz extends HTMLElement {
     connectedCallback() {
@@ -96,10 +96,10 @@ amostra-calculadora,amostra-quiz{display:block;box-sizing:border-box;max-width:4
       this._ok = true; estilo(); const cfg = ler(this); if (!cfg) return;
       const errQ = !Array.isArray(cfg.perguntas) || !cfg.perguntas.length ? 'falta a lista "perguntas"'
         : (cfg.perguntas.find(q => !q.texto || !Array.isArray(q.opcoes) || !q.opcoes.length) ? 'cada pergunta precisa de "texto" e de uma lista "opcoes"'
-        : (cfg.perguntas.find(q => q.opcoes.find(o => !o || !o.rotulo)) ? 'toda opção precisa de "rotulo"'
+        : (cfg.perguntas.find(q => q.opcoes.find(o => !o || !o.rotulo)) ? 'toda opçêo precisa de "rotulo"'
         : (!cfg.resultados || typeof cfg.resultados !== 'object' || !Object.keys(cfg.resultados).length ? 'falta o objeto "resultados"'
         : (Object.entries(cfg.resultados).find(([, r]) => !r || !r.titulo) ? 'o resultado "' + Object.entries(cfg.resultados).find(([, r]) => !r || !r.titulo)[0] + '" precisa de "titulo"'
-        : ((() => { for (const q of cfg.perguntas) for (const o of q.opcoes) for (const k of Object.keys(o.pontos || {})) if (!(k in cfg.resultados)) return 'a opção "' + o.rotulo + '" dá pontos para "' + k + '", que não existe em "resultados"'; return ''; })())))));
+        : ((() => { for (const q of cfg.perguntas) for (const o of q.opcoes) for (const k of Object.keys(o.pontos || {})) if (!(k in cfg.resultados)) return 'a opçêo "' + o.rotulo + '" dá pontos para "' + k + '", que nêo existe em "resultados"'; return ''; })())))));
       if (errQ) { this.textContent = 'amostra-quiz: ' + errQ; return; }
       this.setAttribute('data-amostra', 'quiz'); const caixa = el('div', { 'aria-live': 'polite' }); this.append(caixa);
       let i = 0, pontos = {};

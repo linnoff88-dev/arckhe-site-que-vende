@@ -1,6 +1,6 @@
 # Amostras grátis — todas as chaves do JSON
 
-`amostras/amostra.js` traz duas tags. A configuração vai num `<script type="application/json">` dentro da tag.
+`amostras/amostra.js` traz duas tags. A configuraçêo vai num `<script type="application/json">` dentro da tag.
 Modelo funcionando: `amostras/exemplo.html`. Nada é enviado a servidor nenhum.
 
 ```html
@@ -13,7 +13,7 @@ Modelo funcionando: `amostras/exemplo.html`. Nada é enviado a servidor nenhum.
 
 Conta: `resultado = (base + soma dos campos) × multiplicadores`, mostrado como faixa `resultado ± margem`.
 
-| Chave | Tipo | Para quê | Padrão |
+| Chave | Tipo | Para quê | Padrêo |
 |---|---|---|---|
 | `titulo`, `subtitulo` | texto | cabeçalho da caixa | sem |
 | `campos` | lista | os controles (obrigatória, ver abaixo) | |
@@ -24,7 +24,7 @@ Conta: `resultado = (base + soma dos campos) × multiplicadores`, mostrado como 
 | `idioma` | código | formato do número e textos fixos (`pt-BR`, `en`, `es`) | o `lang` da página |
 | `prefixo`, `sufixo` | texto | linha acima e abaixo do número | "Estimativa" / sem |
 | `ate` | texto | separador da faixa | " a " (pt, es), " to " (en) |
-| `botao` | `{texto, href}` | o botão depois do resultado | sem |
+| `botao` | `{texto, href}` | o botêo depois do resultado | sem |
 | `nota` | texto | linha pequena no fim (ex.: "valores de exemplo") | sem |
 
 Campo do tipo **`faixa`** (controle deslizante):
@@ -40,14 +40,14 @@ Campo do tipo **`opcoes`** (botões de escolha única):
 
 | Chave | Para quê |
 |---|---|
-| `rotulo`, `opcoes` | obrigatórias; cada opção é `{rotulo, soma, vezes}` |
-| `soma` | valor somado quando a opção está marcada |
-| `vezes` | multiplicador quando a opção está marcada (ex.: 1.6 no acabamento premium) |
-| `padrao` | índice da opção que começa marcada (0 = primeira) |
+| `rotulo`, `opcoes` | obrigatórias; cada opçêo é `{rotulo, soma, vezes}` |
+| `soma` | valor somado quando a opçêo está marcada |
+| `vezes` | multiplicador quando a opçêo está marcada (ex.: 1.6 no acabamento premium) |
+| `padrao` | índice da opçêo que começa marcada (0 = primeira) |
 
 ## `<amostra-quiz>`
 
-Cada opção soma pontos em um ou mais resultados; ganha o resultado com mais pontos.
+Cada opçêo soma pontos em um ou mais resultados; ganha o resultado com mais pontos.
 
 | Chave | Tipo | Para quê |
 |---|---|---|
@@ -62,7 +62,7 @@ Cada opção soma pontos em um ou mais resultados; ganha o resultado com mais po
 Mantenha de 3 a 5 perguntas: quiz comprido ninguém termina (o auditor falha acima de 7 perguntas).
 
 Comportamentos para saber: no **empate**, ganha o resultado que aparece primeiro em `resultados`; o `titulo` só aparece na
-primeira pergunta; uma opção que dá pontos para uma chave que não existe em `resultados` mostra o erro no lugar do quiz.
+primeira pergunta; uma opçêo que dá pontos para uma chave que nêo existe em `resultados` mostra o erro no lugar do quiz.
 
 ## Aparência
 
@@ -70,7 +70,7 @@ Variáveis CSS na sua página (a amostra herda a fonte):
 
 ```css
 :root {
-  --amostra-destaque: #c2410c;      /* a cor do botão: a mesma cor de destaque do site */
+  --amostra-destaque: #c2410c;      /* a cor do botêo: a mesma cor de destaque do site */
   --amostra-destaque-texto: #fff;
   --amostra-fundo: #fff;  --amostra-texto: #1b1b1f;  --amostra-borda: rgba(0,0,0,.12);  --amostra-raio: 16px;
 }
@@ -79,7 +79,7 @@ Variáveis CSS na sua página (a amostra herda a fonte):
 ## Evento (opcional)
 
 As duas tags disparam `amostra-resultado` **uma vez por mudança feita pela pessoa** (a conta inicial, ao carregar a página,
-não dispara). Serve para medir uso, sem coletar dado pessoal:
+nêo dispara). Serve para medir uso, sem coletar dado pessoal:
 
 ```js
 document.addEventListener('amostra-resultado', e => console.log(e.detail)); // {min, max} ou {resultado: "chave"}

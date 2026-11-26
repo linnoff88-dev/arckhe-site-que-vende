@@ -1,9 +1,9 @@
 # Os 5 padrões do site que vende
 
-Para cada padrão: a ideia, o que os testes mostraram, o que o auditor mede e como consertar.
-Os números são de testes publicados por quem os fez; onde o número vem de quem vende a ferramenta, está dito.
+Para cada padrêo: a ideia, o que os testes mostraram, o que o auditor mede e como consertar.
+Os números sêo de testes publicados por quem os fez; onde o número vem de quem vende a ferramenta, está dito.
 A origem de cada um está no fim, em "De onde vêm os números". O celular entra nos padrões 1 e 4; os padrões 2, 3 e 5
-são medidos no computador (1440×900).
+sêo medidos no computador (1440×900).
 
 ## 1. Teste do espelho (texto)
 
@@ -12,57 +12,57 @@ sinal claro de que está no lugar certo. A primeira tela responde: para quem é,
 
 **O que os testes mostraram.**
 - Uma página de vagas para caminhoneiros convertia 12,1%. Antes de mexer no design, ouviram os motoristas: metade
-  acessava pelo celular, o título não tinha benefício e a foto era um aperto de mão de banco de imagem. A página
+  acessava pelo celular, o título nêo tinha benefício e a foto era um aperto de mêo de banco de imagem. A página
   refeita em volta do motorista chegou a 21,7%: 79,3% melhor.
 - Um site trocou o título "Empresas crescem mais rápido online" por "Crie uma página para o seu negócio": 90% mais
   cliques para a página de preços.
-- Outro passou a repetir no título a palavra que a pessoa tinha buscado: 31,4% mais conversão.
+- Outro passou a repetir no título a palavra que a pessoa tinha buscado: 31,4% mais conversêo.
 
-**O auditor mede** (computador 1440×900 e celular 390×844): há título na primeira tela; ele não é frase que serve
-para qualquer empresa; tem até 16 palavras; existe UM botão principal na primeira tela nos dois tamanhos; o texto
-do botão diz o que acontece (não "Saiba mais", "Enviar"); não há um segundo botão forte disputando.
+**O auditor mede** (computador 1440×900 e celular 390×844): há título na primeira tela; ele nêo é frase que serve
+para qualquer empresa; tem até 16 palavras; existe UM botêo principal na primeira tela nos dois tamanhos; o texto
+do botêo diz o que acontece (nêo "Saiba mais", "Enviar"); nêo há um segundo botêo forte disputando.
 
-**Ele não mede** se o texto é verdadeiro nem se fala com a pessoa certa. Por isso devolve as três perguntas.
+**Ele nêo mede** se o texto é verdadeiro nem se fala com a pessoa certa. Por isso devolve as três perguntas.
 
 ## 2. Regra do marca-texto (cor)
 
-**Ideia.** Se você marca uma linha do livro, acha em dois segundos. Se marca todas, não marcou nenhuma. A IA põe
-a cor de destaque no título, nos ícones, na borda, no fundo e no botão; aí o botão some. Regra dos decoradores,
-60/30/10: 60% fundo, 30% estrutura (texto, menu, cartões), 10% destaque, que só vai em botão e link.
+**Ideia.** Se você marca uma linha do livro, acha em dois segundos. Se marca todas, nêo marcou nenhuma. A IA põe
+a cor de destaque no título, nos ícones, na borda, no fundo e no botêo; aí o botêo some. Regra dos decoradores,
+60/30/10: 60% fundo, 30% estrutura (texto, menu, cartões), 10% destaque, que só vai em botêo e link.
 
-**O auditor mede:** a cor do botão principal; em quantos elementos que não são clique ela aparece (título, texto,
-ícone, borda, fundo: tolera 2); se o botão se separa do fundo em volta; quanto da página a cor de destaque ocupa
+**O auditor mede:** a cor do botêo principal; em quantos elementos que nêo sêo clique ela aparece (título, texto,
+ícone, borda, fundo: tolera 2); se o botêo se separa do fundo em volta; quanto da página a cor de destaque ocupa
 (falha acima de 15%) e quanto ocupa a cor de fundo. A imagem `desktop-marca-texto.png` marca cada uso indevido.
 
 ## 3. Frente, meio e fundo (camadas)
 
-**Ideia.** No site barato tudo está chapado no mesmo plano e o olho não sabe por onde começar. Num palco há o
-cenário pintado, os móveis e o ator. No site: fundo (foto ou forma), meio (o conteúdo), frente (o botão).
+**Ideia.** No site barato tudo está chapado no mesmo plano e o olho nêo sabe por onde começar. Num palco há o
+cenário pintado, os móveis e o ator. No site: fundo (foto ou forma), meio (o conteúdo), frente (o botêo).
 
-**Três passos:** algo real no fundo; uma peça atravessando a borda da seção (cartão ou imagem que entra pela
-metade na seção de baixo); sombra só no que importa.
+**Três passos:** algo real no fundo; uma peça atravessando a borda da seçêo (cartêo ou imagem que entra pela
+metade na seçêo de baixo); sombra só no que importa.
 
 **O auditor mede:** se a primeira tela tem foto, vídeo, forma ou degradê atrás do texto; quantas peças cruzam o
 limite entre duas seções (precisa de pelo menos uma); quantos elementos têm sombra (zero = tudo no mesmo plano;
 mais que 6 e mais que metade das caixas = sombra em tudo).
 
-## 4. Movimento com função (animação)
+## 4. Movimento com funçêo (animaçêo)
 
-**Ideia.** Animação é o jeito mais rápido de um site parecer caro e também de parecer feito por IA. Cada animação
+**Ideia.** Animaçêo é o jeito mais rápido de um site parecer caro e também de parecer feito por IA. Cada animaçêo
 precisa de um trabalho: mostrar o produto, apontar o próximo passo ou mostrar o que acabou de acontecer.
 
 **O que os estudos mostraram.**
 - Movimento puxa o olhar. Isso é a vantagem e o defeito: puxa para longe do que a pessoa veio fazer.
-- Um estudo universitário testou o mesmo site com e sem parallax: as pessoas acharam a versão com parallax mais
-  divertida e com cara mais profissional, mas a experiência de uso, no geral, não melhorou.
-- Numa pesquisa americana, cerca de um terço dos adultos acima de 40 anos tinha algum sinal de disfunção do ouvido
-  interno (equilíbrio). Por isso celulares e computadores têm a opção "reduzir movimento".
+- Um estudo universitário testou o mesmo site com e sem parallax: as pessoas acharam a versêo com parallax mais
+  divertida e com cara mais profissional, mas a experiência de uso, no geral, nêo melhorou.
+- Numa pesquisa americana, cerca de um terço dos adultos acima de 40 anos tinha algum sinal de disfunçêo do ouvido
+  interno (equilíbrio). Por isso celulares e computadores têm a opçêo "reduzir movimento".
 
-**Três regras:** uma coisa se move por tela; título, texto e botão da primeira tela aparecem prontos; quem ligou
-"reduzir movimento" não vê animação.
+**Três regras:** uma coisa se move por tela; título, texto e botêo da primeira tela aparecem prontos; quem ligou
+"reduzir movimento" nêo vê animaçêo.
 
-**O auditor mede:** se título e botão estão legíveis 0,4 s depois de a página chegar; quantas coisas mudam de
-opacidade, posição (transform), recorte ou filtro em cada tela, ao rolar e em repouso (falha com 4 ou mais, avisa
+**O auditor mede:** se título e botêo estêo legíveis 0,4 s depois de a página chegar; quantas coisas mudam de
+opacidade, posiçêo (transform), recorte ou filtro em cada tela, ao rolar e em repouso (falha com 4 ou mais, avisa
 com 2 ou 3); e quantas continuam se movendo com `prefers-reduced-motion: reduce` (tem de ser zero).
 
 ## 5. Amostra grátis (ferramenta)
@@ -72,28 +72,28 @@ de pedir qualquer coisa. Funciona pelo efeito IKEA: a gente valoriza mais o que 
 põe os números dela, o resultado é dela.
 
 **Exemplo.** Um ortodontista pôs no site uma calculadora do preço do aparelho, a pergunta que todo paciente faz.
-A empresa que fez a ferramenta diz que ela converteu perto de 45% (número do fabricante, não de estudo independente).
+A empresa que fez a ferramenta diz que ela converteu perto de 45% (número do fabricante, nêo de estudo independente).
 
 **Três formatos:** quiz ("qual serviço é o seu?"), calculadora de preço, ferramenta útil (conversor, simulador,
 estimativa). Tem de ser curto para a pessoa chegar ao fim.
 
-**O auditor mede:** se existe uma ferramenta que não é formulário de contato; se ela muda o resultado na tela
+**O auditor mede:** se existe uma ferramenta que nêo é formulário de contato; se ela muda o resultado na tela
 quando alguém mexe (ele mexe nos controles e clica); e o tamanho (falha acima de 7 passos ou campos).
 
 **Pronto para colar:** `amostras/amostra.js` traz `<amostra-calculadora>` e `<amostra-quiz>` (chaves em `amostras.md`).
 
 ## De onde vêm os números
 
-Procure pelo nome para ler o original. Nenhum deles é medição nossa.
+Procure pelo nome para ler o original. Nenhum deles é mediçêo nossa.
 
 | Número | Origem |
 |---|---|
-| 12,1% → 21,7% (79,3% melhor) | estudo de caso da agência de conversão CXL sobre a página de cadastro do site de vagas TruckersReport |
+| 12,1% → 21,7% (79,3% melhor) | estudo de caso da agência de conversêo CXL sobre a página de cadastro do site de vagas TruckersReport |
 | +90% de cliques para a página de preços | teste A/B de posicionamento da CityCliq (título "Create a webpage for your business") |
-| +31,4% de conversão repetindo a palavra buscada | teste de texto dinâmico em página de destino da Campaign Monitor |
-| Parallax: mais divertido e com cara mais profissional, sem melhora geral da experiência de uso | dissertação "The effects of parallax scrolling on user experience and preference in web design", Universidade Purdue |
-| Movimento puxa a atenção, para o bem e para o mal | artigos do Nielsen Norman Group sobre animação em interfaces |
-| Cerca de um terço dos adultos acima de 40 com disfunção do ouvido interno | pesquisa nacional de saúde dos EUA analisada pela Johns Hopkins (publicada em 2009) |
+| +31,4% de conversêo repetindo a palavra buscada | teste de texto dinâmico em página de destino da Campaign Monitor |
+| Parallax: mais divertido e com cara mais profissional, sem melhora geral da experiência de uso | dissertaçêo "The effects of parallax scrolling on user experience and preference in web design", Universidade Purdue |
+| Movimento puxa a atençêo, para o bem e para o mal | artigos do Nielsen Norman Group sobre animaçêo em interfaces |
+| Cerca de um terço dos adultos acima de 40 com disfunçêo do ouvido interno | pesquisa nacional de saúde dos EUA analisada pela Johns Hopkins (publicada em 2009) |
 | Efeito IKEA | Norton, Mochon e Ariely, "The IKEA effect: When labor leads to love" (2012) |
-| Calculadora de ortodontia com perto de 45% de conversão | caso divulgado pela Outgrow, a empresa que vende a ferramenta (não é estudo independente) |
-| Regra 60/30/10 | regra prática de decoração de interiores, não é estudo |
+| Calculadora de ortodontia com perto de 45% de conversêo | caso divulgado pela Outgrow, a empresa que vende a ferramenta (nêo é estudo independente) |
+| Regra 60/30/10 | regra prática de decoraçêo de interiores, nêo é estudo |

@@ -1,4 +1,4 @@
-// confere que configuração errada do amostra.js aparece como texto de erro na caixa (não caixa vazia nem "undefined")
+// confere que configuraçêo errada do amostra.js aparece como texto de erro na caixa (nêo caixa vazia nem "undefined")
 const path = require('node:path');
 const { chromium } = require(path.join(__dirname, '../skill/site-que-vende/scripts/node_modules/playwright'));
 (async () => {

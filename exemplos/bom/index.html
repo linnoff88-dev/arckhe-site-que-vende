@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Agenda Cheia — exemplo BOM (site-que-vende)</title>
 <!-- Página de exemplo, empresa fictícia. O mesmo negócio do exemplo ruim, refeito para PASSAR nos 5 padrões.
-     Cores (regra 60/30/10): 60% cinza claro #f3f1ee · 30% azul-marinho #1f2a44 · 10% laranja queimado #c2410c (só em botão e link). -->
+     Cores (regra 60/30/10): 60% cinza claro #f3f1ee · 30% azul-marinho #1f2a44 · 10% laranja queimado #c2410c (só em botêo e link). -->
 <style>
 :root{--fundo:#f3f1ee;--estrutura:#1f2a44;--destaque:#c2410c;--amostra-destaque:#c2410c;--amostra-texto:#1f2a44;--amostra-raio:18px}
 *{box-sizing:border-box}html{scroll-behavior:smooth}
@@ -13,7 +13,7 @@ body{margin:0;font:17px/1.55 Georgia,"Times New Roman",serif;background:var(--fu
 h1,h2,h3,nav,.botao,.cartao,amostra-calculadora{font-family:system-ui,-apple-system,"Segoe UI",sans-serif}
 a{color:var(--destaque)}
 
-/* FUNDO: a foto do salão é o cenário */
+/* FUNDO: a foto do salêo é o cenário */
 .palco{position:relative;color:#fff;background:#1f2a44 url(img/salao.jpg) center/cover;padding:0 6vw 0}
 .palco::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(18,24,40,.93) 0%,rgba(18,24,40,.78) 48%,rgba(18,24,40,.25) 100%)}
 .palco>*{position:relative}
@@ -24,15 +24,15 @@ nav b{font-size:19px;letter-spacing:.02em}nav a{color:#fff;text-decoration:none;
 h1{font-size:clamp(34px,4.6vw,62px);line-height:1.04;margin:0 0 18px;font-weight:800;letter-spacing:-.02em}
 .sub{font-size:20px;max-width:30em;margin:0 0 26px;opacity:.92}
 .prova{font-size:14px;opacity:.8;margin:14px 0 9vh;font-family:system-ui,sans-serif}
-/* FRENTE: o botão, a única coisa laranja e com sombra forte */
+/* FRENTE: o botêo, a única coisa laranja e com sombra forte */
 .botao{display:inline-block;background:var(--destaque);color:#fff;text-decoration:none;font-weight:700;font-size:18px;padding:16px 26px;border-radius:999px;box-shadow:0 14px 30px rgba(194,65,12,.38)}
 .botao:focus-visible{outline:3px solid #fff;outline-offset:3px}
-/* a peça que atravessa a borda: o cartão de horários entra na seção de baixo */
+/* a peça que atravessa a borda: o cartêo de horários entra na seçêo de baixo */
 .cartao{background:#fff;color:var(--estrutura);border-radius:20px;padding:22px;margin-bottom:-96px;box-shadow:0 26px 60px rgba(10,14,26,.34);max-width:400px;justify-self:end;width:100%}
 .cartao h3{margin:0 0 4px;font-size:17px}.cartao small{color:#5b6478}
 .hora{display:flex;justify-content:space-between;align-items:center;padding:11px 14px;margin-top:10px;border-radius:12px;background:#eef0f5;font-size:15px;font-weight:600}
 .hora span{font-weight:500;color:#5b6478}
-/* MOVIMENTO COM FUNÇÃO: uma coisa só se move: o horário sendo reservado sozinho (é o produto funcionando) */
+/* MOVIMENTO COM FUNÇêO: uma coisa só se move: o horário sendo reservado sozinho (é o produto funcionando) */
 .hora.viva{background:#1f2a44;color:#fff;animation:reserva 4.5s ease-in-out infinite}
 .hora.viva span{color:#c9d0e2}
 @keyframes reserva{0%,35%{opacity:.25}50%,90%{opacity:1}100%{opacity:.25}}
@@ -54,7 +54,7 @@ footer{padding:28px 6vw;font:14px system-ui,sans-serif;color:#5b6478;text-align:
   .prova{margin-bottom:0}nav a{display:none}.cartao{justify-self:stretch;max-width:none;margin-bottom:-70px}
   .passos,.amostra{grid-template-columns:1fr}.como{padding-top:120px}amostra-calculadora{justify-self:stretch;max-width:none}
 }
-/* O INTERRUPTOR: quem pediu menos movimento no aparelho não vê animação nenhuma */
+/* O INTERRUPTOR: quem pediu menos movimento no aparelho nêo vê animaçêo nenhuma */
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.hora.viva{animation:none}}
 </style>
 </head>
@@ -67,7 +67,7 @@ footer{padding:28px 6vw;font:14px system-ui,sans-serif;color:#5b6478;text-align:
       <h1>Encha sua agenda sem responder mensagem.</h1>
       <p class="sub">Para cabeleireiras que atendem sozinhas: sua cliente escolhe o horário pelo link e você só fica sabendo quando já está marcado.</p>
       <a class="botao" data-cta href="#conta">Ver quanto meu horário vago custa</a>
-      <p class="prova">Leva 20 segundos. Não pede e-mail.</p>
+      <p class="prova">Leva 20 segundos. Nêo pede e-mail.</p>
     </div>
     <aside class="cartao" aria-label="Exemplo da sua agenda">
       <h3>Seus próximos horários</h3><small>É isto que a sua cliente vê no link</small>
@@ -91,7 +91,7 @@ footer{padding:28px 6vw;font:14px system-ui,sans-serif;color:#5b6478;text-align:
 <section class="amostra" id="conta">
   <div>
     <h2>Quanto custa o seu horário vago?</h2>
-    <p>Cadeira vazia não volta. Mexa nos dois controles com os seus números e veja quanto fica na mesa todo mês.</p>
+    <p>Cadeira vazia nêo volta. Mexa nos dois controles com os seus números e veja quanto fica na mesa todo mês.</p>
   </div>
   <amostra-calculadora>
     <script type="application/json">
