@@ -6,7 +6,7 @@
 </div>
 
 
-[![site-que-vende](guia/assets/banner.jpg)](https://inematds.github.io/site-que-vende/guia/)
+[![site-que-vende](guia/assets/banner.jpg)](https://linnoff88-dev.github.io/arckhe-/guia/)
 
 **ê°Å¸â¡Â§ê°Å¸â¡Â· [PortuguêÂªs](README.md) êÂ· ê°Å¸â¡Âºê°Å¸â¡Â¸ [English](README.en.md) êÂ· ê°Å¸â¡Âªê°Å¸â¡Â¸ [EspaêÂ±ol](README.es.md)**
 
@@ -18,10 +18,10 @@ texto, cor, camadas, movimento e amostra grêÂ¡tis, e devolve um relatêÂ
 no seu agente de cêÂ³digo. Vem com uma skill para o Claude Code, dois componentes de amostra grêÂ¡tis (quiz e
 calculadora) e um par de pêÂ¡ginas de exemplo, uma ruim e uma boa.
 
-[Guia completo](https://inematds.github.io/site-que-vende/guia/) êÂ·
-[Exemplo ruim](https://inematds.github.io/site-que-vende/exemplos/ruim/) (0 de 5) êÂ·
-[Exemplo bom](https://inematds.github.io/site-que-vende/exemplos/bom/) (5 de 5) êÂ·
-[Amostras](https://inematds.github.io/site-que-vende/skill/site-que-vende/amostras/exemplo.html)
+[Guia completo](https://linnoff88-dev.github.io/arckhe-/guia/) êÂ·
+[Exemplo ruim](https://linnoff88-dev.github.io/arckhe-/exemplos/ruim/) (0 de 5) êÂ·
+[Exemplo bom](https://linnoff88-dev.github.io/arckhe-/exemplos/bom/) (5 de 5) êÂ·
+[Amostras](https://linnoff88-dev.github.io/arckhe-/skill/site-que-vende/amostras/exemplo.html)
 
 ## Os 5 padrêÂµes
 
@@ -38,7 +38,7 @@ Detalhes e nêÂºmeros dos testes: [`cinco-padroes.md`](skill/site-que-vende/
 ## Usar em 2 minutos
 
 ```bash
-git clone https://github.com/inematds/site-que-vende && cd site-que-vende
+git clone https://github.com/linnoff88-dev/site-que-vende && cd site-que-vende
 cd skill/site-que-vende/scripts && npm install && npx playwright install chromium && cd -
 
 node skill/site-que-vende/scripts/auditar.js https://seusite.com.br --saida auditoria

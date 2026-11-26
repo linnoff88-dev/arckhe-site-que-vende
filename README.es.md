@@ -1,6 +1,6 @@
 # site-que-vende
 
-[![site-que-vende](guia/assets/banner-es.jpg)](https://inematds.github.io/site-que-vende/guia/es/)
+[![site-que-vende](guia/assets/banner-es.jpg)](https://linnoff88-dev.github.io/arckhe-/guia/es/)
 
 **🇧🇷 [Português](README.md) · 🇺🇸 [English](README.en.md) · 🇪🇸 [Español](README.es.md)**
 
@@ -8,10 +8,10 @@
 
 site-que-vende es un kit que mide en el navegador los cinco patrones que distinguen un sitio que atrae clientes de un sitio «bonito y barato» hecho con IA, y te dice qué corregir. Abre tu página en una computadora y en un celular, mide texto, color, capas, movimiento y muestra gratis, y devuelve un informe con la lista de correcciones lista para pegar en tu agente de código. Incluye una skill para Claude Code, dos componentes de muestra gratis (quiz y calculadora) y un par de páginas de ejemplo: una mala y una buena.
 
-[Guía completa](https://inematds.github.io/site-que-vende/guia/es/) ·
-[Ejemplo malo](https://inematds.github.io/site-que-vende/exemplos/ruim/) (0 de 5) ·
-[Ejemplo bueno](https://inematds.github.io/site-que-vende/exemplos/bom/) (5 de 5) ·
-[Muestras](https://inematds.github.io/site-que-vende/skill/site-que-vende/amostras/exemplo.html)
+[Guía completa](https://linnoff88-dev.github.io/arckhe-/guia/es/) ·
+[Ejemplo malo](https://linnoff88-dev.github.io/arckhe-/exemplos/ruim/) (0 de 5) ·
+[Ejemplo bueno](https://linnoff88-dev.github.io/arckhe-/exemplos/bom/) (5 de 5) ·
+[Muestras](https://linnoff88-dev.github.io/arckhe-/skill/site-que-vende/amostras/exemplo.html)
 
 ## Los 5 patrones
 
@@ -28,7 +28,7 @@ Detalles y cifras de las pruebas: [`cinco-padroes.md`](skill/site-que-vende/refe
 ## Úsalo en 2 minutos
 
 ```bash
-git clone https://github.com/inematds/site-que-vende && cd site-que-vende
+git clone https://github.com/linnoff88-dev/site-que-vende && cd site-que-vende
 cd skill/site-que-vende/scripts && npm install && npx playwright install chromium && cd -
 
 node skill/site-que-vende/scripts/auditar.js https://seusite.com.br --saida auditoria

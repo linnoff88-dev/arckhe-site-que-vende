@@ -1,6 +1,6 @@
 # site-que-vende
 
-[![site-que-vende](guia/assets/banner-en.jpg)](https://inematds.github.io/site-que-vende/guia/en/)
+[![site-que-vende](guia/assets/banner-en.jpg)](https://linnoff88-dev.github.io/arckhe-/guia/en/)
 
 **🇧🇷 [Português](README.md) · 🇺🇸 [English](README.en.md) · 🇪🇸 [Español](README.es.md)**
 
@@ -8,10 +8,10 @@
 
 site-que-vende is a kit that measures the five patterns in a browser that distinguish a website that brings in customers from an AI-made “pretty and cheap” website, and tells you what to fix. It opens your page on desktop and mobile, measures text, color, layers, motion, and a free sample, then returns a report with a list of fixes ready to paste into your coding agent. It includes a skill for Claude Code, two free sample components (quiz and calculator), and a pair of example pages, one bad and one good.
 
-[Complete guide](https://inematds.github.io/site-que-vende/guia/en/) ·
-[Bad example](https://inematds.github.io/site-que-vende/exemplos/ruim/) (0 of 5) ·
-[Good example](https://inematds.github.io/site-que-vende/exemplos/bom/) (5 of 5) ·
-[Samples](https://inematds.github.io/site-que-vende/skill/site-que-vende/amostras/exemplo.html)
+[Complete guide](https://linnoff88-dev.github.io/arckhe-/guia/en/) ·
+[Bad example](https://linnoff88-dev.github.io/arckhe-/exemplos/ruim/) (0 of 5) ·
+[Good example](https://linnoff88-dev.github.io/arckhe-/exemplos/bom/) (5 of 5) ·
+[Samples](https://linnoff88-dev.github.io/arckhe-/skill/site-que-vende/amostras/exemplo.html)
 
 ## The 5 patterns
 
@@ -28,7 +28,7 @@ Test details and numbers: [`cinco-padroes.md`](skill/site-que-vende/referencias/
 ## Get started in 2 minutes
 
 ```bash
-git clone https://github.com/inematds/site-que-vende && cd site-que-vende
+git clone https://github.com/linnoff88-dev/site-que-vende && cd site-que-vende
 cd skill/site-que-vende/scripts && npm install && npx playwright install chromium && cd -
 
 node skill/site-que-vende/scripts/auditar.js https://seusite.com.br --saida auditoria

@@ -2,7 +2,7 @@
 
 Kit que mede os 5 padrões do site que vende (auditor Playwright + amostras + skill). Guia em `guia/` (PT, `en/`, `es/`).
 
-- Commits: autor `inematds <inematds@gmail.com>`. Repo `inematds/site-que-vende`, Pages da raiz (branch main).
+- Commits: autor `linnoff88-dev <linnoff88-dev@gmail.com>`. Repo `linnoff88-dev/site-que-vende`, Pages da raiz (branch main).
 - Antes de qualquer commit: `bash tests/rodar.sh` → `TUDO OK`. O par `exemplos/ruim` (0 de 5) e `exemplos/bom` (5 de 5) é o teste de aceitaçêo: nêo afrouxar o auditor para um exemplo passar.
 - Nêo citar fonte, autor, canal nem curso em nenhum arquivo (regra do Nei, 23/10/2026). Números só os de `skill/site-que-vende/referencias/cinco-padroes.md`.
 - Mudou o fluxo? Atualizar "O processo, do início ao fim" no README (PT/EN/ES) no mesmo commit.
